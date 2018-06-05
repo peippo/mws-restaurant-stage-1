@@ -1,4 +1,13 @@
 @charset "utf-8";
+@import 'breakpoint-mixin.scss';
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 
 body, td, th, p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -61,12 +70,19 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 // ====================== Navigation ======================
 nav {
 	width: 100%;
-	height: 80px;
 	background-color: #252831;
-	text-align:center;
+	background: linear-gradient(to top, lighten(#252831, 10%), #252831 50%, #252831);
+	display: flex;
+	text-align: center;
+	box-shadow: 0 20px 30px -20px rgba(black, 0.75);
+	z-index: 2;
+	position: relative;
+	border-bottom: 1px solid lighten(#252831, 60%);
 
 	h1 {
-		margin: auto;
+		//margin: auto;
+		line-height: 1.2;
+		margin: .6em auto;
 	}
 
 	h1 a {
@@ -124,16 +140,26 @@ nav {
 
 .filter-options {
 	width: 100%;
-	height: 50px;
+	padding: 20px 0;
 	background-color: #3397DB;
+	background: linear-gradient(to bottom, lighten(#3397DB, 10%), #3397DB 50%, #3397DB);
+	border-top: 1px solid lighten(#3397DB, 40%);
 	align-items: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
 	h2 {
 		color: white;
 		font-size: 1rem;
 		font-weight: normal;
 		line-height: 1;
-		margin: 0 20px;
+		margin: 0 10px;
+
+		@include breakpoint(sm) {
+			display: inline;
+		}
 	}
 
 	select {
@@ -145,7 +171,15 @@ nav {
 		letter-spacing: 0;
 		margin: 10px;
 		padding: 0 10px;
-		width: 200px;
+		width: calc(100% - 20px);
+
+		@include breakpoint(sm) {
+			width: 250px;
+		}
+
+		@include breakpoint(md) {
+			width: 350px;
+		}
 	}
 }
 
@@ -156,16 +190,31 @@ nav {
 	margin: 0;
 	padding: 30px 15px 60px;
 	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
 
 	li {
 		background-color: #fff;
-		border: 2px solid #ccc;
+		border: 1px solid #ccc;
 		font-family: Arial,sans-serif;
-		margin: 15px;
+		margin: 5px 0;
 		min-height: 380px;
-		padding: 0 30px 25px;
 		text-align: left;
-		width: 270px;
+		width: 100%;
+		border-radius: 10px;
+
+		@include breakpoint(sm) {
+			width: calc(50% - 20px);
+			margin: 10px;
+		}
+
+		@include breakpoint(md) {
+			width: calc(33% - 20px);
+		}
+
+		@include breakpoint(lg) {
+			width: calc(25% - 20px);
+		}
 	}
 
 	.restaurant-img {
@@ -175,6 +224,11 @@ nav {
 		max-width: 100%;
 		min-height: 248px;
 		min-width: 100%;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.info-wrapper {
+		padding: 0 30px 20px;
 	}
 
 	li h1 {
@@ -195,6 +249,7 @@ nav {
 
 	li a {
 		background-color: orange;
+		background: linear-gradient(to bottom, lighten(orange, 20%), orange 60%, orange);
 		border-bottom: 3px solid #eee;
 		color: #fff;
 		display: inline-block;
@@ -204,6 +259,12 @@ nav {
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			border-bottom: 3px solid white;
+			background: darken(orange, 4%);
+		}
 	}
 }
 
