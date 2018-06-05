@@ -95,12 +95,12 @@ nav {
 }
 
 #breadcrumb {
-	padding: 10px 40px 16px;
+	padding: 10px 20px 15px;
 	list-style: none;
 	background-color: #eee;
 	font-size: 17px;
 	margin: 0;
-	width: calc(50% - 80px);
+	//width: calc(50% - 80px);
 
 	// Display list items side by side
 	li {
@@ -272,34 +272,50 @@ nav {
 /* ====================== Restaurant Details ====================== */
 
 .inside {
-	header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 1000;
+	@include breakpoint(sm) {
+		#map-container {
+			width: 55%;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			right: 0;
+			box-shadow: -20px 0 50px -20px rgba(black, 0.5) inset;
+		}
+
+		#map {
+			height: 100%;
+		}
+
+		#restaurant-container,
+		#reviews-container,
+		#footer {
+			width: 45%;
+		}
 	}
 
-	#map-container {
-		background: blue none repeat scroll 0 0;
-		height: 87%;
-		position: fixed;
-		right: 0;
-		top: 80px;
-		width: 50%;
+	@include breakpoint(md) {
+		#map-container {
+			width: 60%;
+		}
+
+		#restaurant-container,
+		#reviews-container,
+		#footer {
+			width: 40%;
+		}
 	}
 
-	#map {
-		background-color: #ccc;
-		height: 100%;
-		width: 100%;
-	}
+	@include breakpoint(lg) {
+		#map-container {
+			width: 65%;
+		}
 
-	#footer {
-		bottom: 0;
-		position: absolute;
-		width: 50%;
+		#restaurant-container,
+		#reviews-container,
+		#footer {
+			width: 35%;
+		}
 	}
-
 }
 
 #restaurant-name {
@@ -314,7 +330,8 @@ nav {
 }
 
 #restaurant-img {
-	width: 90%;
+	//width: 90%;
+	max-width: 100%;
 }
 
 #restaurant-address {
@@ -332,19 +349,21 @@ nav {
 	padding: 2px 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 90%;
+	//width: 90%;
 }
 
 #restaurant-container,
 #reviews-container {
 	border-bottom: 1px solid #d9d9d9;
 	border-top: 1px solid #fff;
-	padding: 140px 40px 30px;
-	width: 50%;
+	//padding: 140px 40px 30px;
+	//width: 50%;
+	padding: 20px;
 }
 
 #reviews-container {
-	padding: 30px 40px 80px;
+	//padding: 30px 40px 80px;
+	padding: 20px;
 }
 
 #reviews-container h2 {
@@ -368,7 +387,6 @@ nav {
 		overflow: hidden;
 		padding: 0 20px 20px;
 		position: relative;
-		width: 85%;
 	}
 
 	li p {
