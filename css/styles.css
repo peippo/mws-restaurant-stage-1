@@ -15,11 +15,6 @@ body {
   margin: 0;
   position: relative; }
 
-ul, li {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10pt;
-  color: #333; }
-
 a {
   color: orange;
   text-decoration: none; }
@@ -30,11 +25,13 @@ a {
     border: none 0px #fff; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px; }
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
+
+header {
+  background-color: #f3f3f3; }
 
 #maincontent {
   background-color: #f3f3f3;
@@ -70,23 +67,30 @@ nav {
     text-transform: uppercase; }
 
 #breadcrumb {
-  padding: 10px 20px 15px;
+  padding: 20px;
   list-style: none;
-  background-color: #eee;
-  font-size: 17px;
-  margin: 0; }
+  background-color: #3397DB;
+  background: linear-gradient(to bottom, #5eade3, #3397DB 50%, #3397DB);
+  border-radius: 0 0 50px 0;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  position: relative;
+  z-index: 3; }
   #breadcrumb li {
-    display: inline; }
+    display: inline;
+    color: #155179; }
   #breadcrumb li + li:before {
     padding: 8px;
-    color: black;
+    color: #155179;
     content: "/\00a0"; }
   #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none; }
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white; }
   #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline; }
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
 
 #map {
   height: 400px;
@@ -116,7 +120,6 @@ nav {
   .filter-options select {
     background-color: white;
     border: 1px solid #fff;
-    font-family: Arial,sans-serif;
     font-size: 11pt;
     height: 35px;
     letter-spacing: 0;
@@ -142,7 +145,6 @@ nav {
   #restaurants-list li {
     background-color: #fff;
     border: 1px solid #ccc;
-    font-family: Arial,sans-serif;
     margin: 5px 0;
     min-height: 380px;
     text-align: left;
@@ -170,7 +172,6 @@ nav {
     padding: 0 30px 20px; }
   #restaurants-list li h1 {
     color: #f18200;
-    font-family: Arial,sans-serif;
     font-size: 14pt;
     font-weight: 200;
     letter-spacing: 0;
@@ -204,35 +205,41 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    box-shadow: -20px 0 50px -20px rgba(0, 0, 0, 0.5) inset; }
+    border-left: 1px solid #c5c1c1;
+    box-shadow: -20px 0 20px -10px white; }
   .inside #map {
     height: 100%; }
   .inside #restaurant-container,
   .inside #reviews-container,
   .inside #footer {
-    width: 45%; } }
+    width: 45%; }
+  .inside #breadcrumb {
+    width: 50%; } }
 @media (min-width: 1024px) {
   .inside #map-container {
     width: 60%; }
   .inside #restaurant-container,
   .inside #reviews-container,
   .inside #footer {
-    width: 40%; } }
+    width: 40%; }
+  .inside #breadcrumb {
+    width: 45%; } }
 @media (min-width: 1320px) {
   .inside #map-container {
     width: 65%; }
   .inside #restaurant-container,
   .inside #reviews-container,
   .inside #footer {
-    width: 35%; } }
+    width: 35%; }
+  .inside #breadcrumb {
+    width: 40%; } }
 
 #restaurant-name {
   color: #f18200;
-  font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 15px 0;
   text-transform: uppercase;
   line-height: 1.1; }
 
@@ -257,31 +264,31 @@ nav {
 #restaurant-container,
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #fff;
   padding: 20px; }
 
 #reviews-container {
+  border-top: 1px solid #fff;
   padding: 20px; }
 
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt; }
+  margin-bottom: .25em; }
 
 #reviews-list {
   margin: 0;
   padding: 0; }
   #reviews-list li {
     background-color: #fff;
-    border: 2px solid #f3f3f3;
+    border: 1px solid #ccc;
     display: block;
     list-style-type: none;
     margin: 0 0 30px;
     overflow: hidden;
     padding: 0 20px 20px;
-    position: relative; }
+    position: relative;
+    border-radius: 10px; }
   #reviews-list li p {
     margin: 0 0 10px; }
 
