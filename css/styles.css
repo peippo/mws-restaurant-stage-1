@@ -44,7 +44,9 @@ header {
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative;
+  z-index: 3; }
 
 nav {
   width: 100%;
@@ -210,8 +212,7 @@ nav {
   .inside #map {
     height: 100%; }
   .inside #restaurant-container,
-  .inside #reviews-container,
-  .inside #footer {
+  .inside #reviews-container {
     width: 45%; }
   .inside #breadcrumb {
     width: 50%; } }
@@ -219,8 +220,7 @@ nav {
   .inside #map-container {
     width: 60%; }
   .inside #restaurant-container,
-  .inside #reviews-container,
-  .inside #footer {
+  .inside #reviews-container {
     width: 40%; }
   .inside #breadcrumb {
     width: 45%; } }
@@ -228,8 +228,7 @@ nav {
   .inside #map-container {
     width: 65%; }
   .inside #restaurant-container,
-  .inside #reviews-container,
-  .inside #footer {
+  .inside #reviews-container {
     width: 35%; }
   .inside #breadcrumb {
     width: 40%; } }
