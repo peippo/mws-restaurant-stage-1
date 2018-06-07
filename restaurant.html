@@ -2,69 +2,49 @@
 <html>
 
 <head>
-	<!-- Normalize.css for better cross-browser consistency -->
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-	<!-- Main CSS file -->
-	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css">
 	<title>Restaurant Info</title>
 </head>
 
 <body class="inside">
-	<a href="#restaurant-container" class="skip-link">&darr; Skip to restaurant info</a>
-	<a href="#reviews-container" class="skip-link">&darr; Skip to restaurant reviews</a>
-	<!-- Beginning header -->
+	<a href="#restaurant-container" class="skip-link"><span aria-hidden">↓</span> Skip to restaurant info</a>
+	<a href="#reviews-container" class="skip-link"><span aria-hidden">↓</span> Skip to restaurant reviews</a>
 	<header>
-		<!-- Beginning nav -->
-		<nav>
-			<h1><a href="/">Restaurant Reviews</a></h1>
+		<nav aria-label="Back to homepage link">
+			<span class="site-logo"><a href="/">Restaurant Reviews</a></span>
 		</nav>
-		<!-- Beginning breadcrumb -->
-		<ul id="breadcrumb" >
+		<ul id="breadcrumb" role="navigation" aria-label="Breadcrumb navigation">
 			<li><a href="/">Home</a></li>
 		</ul>
-		<!-- End breadcrumb -->
-		<!-- End nav -->
 	</header>
-	<!-- End header -->
 
-	<!-- Beginning main -->
 	<main id="maincontent">
-		<!-- Beginning map -->
-		<section id="map-container">
+		<section id="map-container" aria-label="Restaurant location">
 			<div id="map"></div>
 		</section>
-		<!-- End map -->
-		<!-- Beginning restaurant -->
-		<section id="restaurant-container">
+
+		<section id="restaurant-container" aria-labelledby="restaurant-name">
 			<h1 id="restaurant-name"></h1>
 			<img id="restaurant-img">
-			<p id="restaurant-cuisine"></p>
-			<p id="restaurant-address"></p>
-			<table id="restaurant-hours"></table>
+			<p id="restaurant-cuisine" aria-label="Restaurant cuisine"></p>
+			<p id="restaurant-address" aria-label="Restaurant address"></p>
+			<table id="restaurant-hours" aria-label="Restaurant opening hours"></table>
 		</section>
-		<!-- end restaurant -->
-		<!-- Beginning reviews -->
-		<section id="reviews-container">
-			<ul id="reviews-list"></ul>
-		</section>
-		<!-- End reviews -->
 	</main>
-	<!-- End main -->
 
-	<!-- Beginning footer -->
+	<aside id="reviews-container" aria-labelledby="reviews-heading">
+		<h2 id="reviews-heading">Reviews</h2>
+		<ul id="reviews-list"></ul>
+	</aside>
+
 	<footer id="footer">
 		Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
 	</footer>
-	<!-- End footer -->
 
-	<!-- Beginning scripts -->
-	<!-- Database helpers -->
 	<script type="text/javascript" src="js/dbhelper.js"></script>
-	<!-- Main javascript file -->
 	<script type="text/javascript" src="js/restaurant_info.js"></script>
-	<!-- Google Maps -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJa0PnOjQUcTO68nlDqfPQW7x8V1gZQBs&libraries=places&callback=initMap"></script>
-	<!-- End scripts -->
 
 </body>
 </html>

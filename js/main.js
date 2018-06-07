@@ -147,7 +147,7 @@ createRestaurantHTML = (restaurant) => {
 	const infoWrapper = document.createElement('div');
 	infoWrapper.classList.add('info-wrapper');
 
-	const name = document.createElement('h1');
+	const name = document.createElement('h3');
 	name.innerHTML = restaurant.name;
 	infoWrapper.append(name);
 

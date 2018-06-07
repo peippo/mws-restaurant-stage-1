@@ -72,15 +72,16 @@ nav {
   z-index: 2;
   position: relative;
   border-bottom: 1px solid #bcc0cc; }
-  nav h1 {
-    line-height: 1.2;
-    margin: .6em auto; }
-  nav h1 a {
-    color: #fff;
-    font-size: 14pt;
-    font-weight: 200;
-    letter-spacing: 10px;
-    text-transform: uppercase; }
+
+.site-logo {
+  margin: 10px auto; }
+
+.site-logo a {
+  color: #fff;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase; }
 
 #breadcrumb {
   padding: 20px;
@@ -189,7 +190,7 @@ nav {
     border-radius: 10px 10px 0 0; }
   #restaurants-list .info-wrapper {
     padding: 0 30px 20px; }
-  #restaurants-list li h1 {
+  #restaurants-list li h3 {
     color: #f18200;
     font-size: 14pt;
     font-weight: 200;

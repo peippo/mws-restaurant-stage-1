@@ -8,30 +8,32 @@
 </head>
 
 <body>
-	<a href="#filters" class="skip-link">&darr; Skip to restaurant filtering</a>
-	<a href="#restaurants" class="skip-link">&darr; Skip to restaurant list</a>
+	<a href="#filters" class="skip-link"><span aria-hidden">↓</span> Skip to restaurant filtering</a>
+	<a href="#restaurants" class="skip-link"><span aria-hidden">↓</span> Skip to restaurant list</a>
 	<header>
-		<nav>
-			<h1><a href="/">Restaurant Reviews</a></h1>
+		<nav aria-label="Back to homepage link">
+			<h1 class="site-logo"><a href="/">Restaurant Reviews</a></h1>
 		</nav>
 	</header>
 
 	<main id="maincontent">
-		<section id="map-container">
+		<section id="map-container" aria-label="Restaurants on map">
 			<div id="map"></div>
 		</section>
-		<section id="filters">
+		<section id="filters" aria-labelledby="filters-heading">
 			<div class="filter-options">
-				<h2>Filter Results</h2>
+				<h2 id="filters-heading">Filter Results</h2>
+				<label for="neighborhoods-select" hidden>Filter by neighborhood</label>
 				<select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
 					<option value="all">All Neighborhoods</option>
 				</select>
+				<label for="cuisines-select" hidden>Filter by cuisine</label>
 				<select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
 					<option value="all">All Cuisines</option>
 				</select>
 			</div>
 		</section>
-		<section id="restaurants">
+		<section id="restaurants" aria-label="Restaurant list">
 			<ul id="restaurants-list"></ul>
 		</section>
 	</main>

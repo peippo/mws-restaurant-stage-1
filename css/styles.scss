@@ -94,20 +94,19 @@ nav {
 	z-index: 2;
 	position: relative;
 	border-bottom: 1px solid lighten(#252831, 60%);
+}
 
-	h1 {
-		//margin: auto;
-		line-height: 1.2;
-		margin: .6em auto;
-	}
+.site-logo {
+	//line-height: 1.2;
+	margin: 10px auto;
+}
 
-	h1 a {
-		color: #fff;
-		font-size: 14pt;
-		font-weight: 200;
-		letter-spacing: 10px;
-		text-transform: uppercase;
-	}
+.site-logo a {
+	color: #fff;
+	font-size: 14pt;
+	font-weight: 200;
+	letter-spacing: 10px;
+	text-transform: uppercase;
 }
 
 #breadcrumb {
@@ -256,7 +255,7 @@ nav {
 		padding: 0 30px 20px;
 	}
 
-	li h1 {
+	li h3 {
 		color: #f18200;
 		font-size: 14pt;
 		font-weight: 200;
