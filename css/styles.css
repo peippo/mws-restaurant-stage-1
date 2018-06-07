@@ -30,6 +30,20 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
+.skip-link {
+  background-color: #ffa502;
+  padding: 15px 20px;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 5;
+  transition: left, .5s;
+  color: #402900; }
+  .skip-link:focus {
+    left: 0;
+    color: #402900; }
+
 header {
   background-color: #f3f3f3; }
 
@@ -128,6 +142,9 @@ nav {
     margin: 10px;
     padding: 0 10px;
     width: calc(100% - 20px); }
+    .filter-options select:focus {
+      background-color: #274d67;
+      color: white; }
     @media (min-width: 720px) {
       .filter-options select {
         width: 250px; } }

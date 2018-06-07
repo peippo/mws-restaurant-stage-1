@@ -45,6 +45,23 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 
+.skip-link {
+	background-color: #ffa502;
+	padding: 15px 20px;
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	z-index: 5;
+	transition: left, .5s;
+	color: #402900;
+
+	&:focus {
+		left: 0;
+		color: #402900;
+	}
+}
+
 header {
 	background-color: #f3f3f3;
 }
@@ -176,6 +193,11 @@ nav {
 		margin: 10px;
 		padding: 0 10px;
 		width: calc(100% - 20px);
+
+		&:focus {
+			background-color: #274d67;
+			color: white;
+		}
 
 		@include breakpoint(sm) {
 			width: 250px;
