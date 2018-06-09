@@ -4,21 +4,6 @@
 class DBHelper {
 
 	/**
-	 * Set base url
-	 */
-	static setBaseUrl() {
-		let pathname = window.location.pathname;
-		pathname = pathname.substring(0, pathname.lastIndexOf("/"));
-		pathname = `${window.location.protocol}//${window.location.host}${pathname}/`;
-
-		const base = document.createElement('base');
-		base.setAttribute('href', pathname);
-
-		const head = document.getElementsByTagName('head');
-		head[0].append(base);
-	}
-
-	/**
 	 * Database URL.
 	 */
 	static get DATABASE_URL() {
@@ -198,5 +183,3 @@ class DBHelper {
 		return marker;
 	}
 }
-
-DBHelper.setBaseUrl();
