@@ -96,17 +96,18 @@ nav {
 	border-bottom: 1px solid lighten(#252831, 60%);
 }
 
-.site-logo {
-	//line-height: 1.2;
-	margin: 10px auto;
-}
-
+.site-logo,
 .site-logo a {
+	margin: 10px auto;
 	color: #fff;
 	font-size: 14pt;
 	font-weight: 200;
 	letter-spacing: 10px;
 	text-transform: uppercase;
+}
+
+.site-logo a {
+
 }
 
 #breadcrumb {

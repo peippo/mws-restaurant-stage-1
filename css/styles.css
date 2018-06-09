@@ -73,10 +73,9 @@ nav {
   position: relative;
   border-bottom: 1px solid #bcc0cc; }
 
-.site-logo {
-  margin: 10px auto; }
-
+.site-logo,
 .site-logo a {
+  margin: 10px auto;
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
